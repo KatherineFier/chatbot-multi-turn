@@ -16,7 +16,11 @@ model = "gpt-3.5-turbo"
 chat_history = []
 
 while True:
-    user_input = input("You: ")
+    if len(chat_history) == 0:
+        user_input = input("Hello! You can can type exit at anytime to end this chat. What is your name? ")
+    else:
+        user_input = input("You: ")
+
     if user_input.lower() == "exit":
         break
 
