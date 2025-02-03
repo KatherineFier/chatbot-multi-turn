@@ -8,6 +8,7 @@ def get_api_chat_response_message(model, messages):
         model = model,
         messages = messages
     )
+    # print(api_response)
 
     return api_response.choices[0].message.content
 
